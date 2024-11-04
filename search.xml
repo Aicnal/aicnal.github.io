@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>基于GitHub-Actions实现的Dockerfile自动编译</title>
+      <link href="/2024/11/04/Tech/%E5%9F%BA%E4%BA%8EGitHub-Actions%E5%AE%9E%E7%8E%B0%E7%9A%84Dockerfile%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91/"/>
+      <url>/2024/11/04/Tech/%E5%9F%BA%E4%BA%8EGitHub-Actions%E5%AE%9E%E7%8E%B0%E7%9A%84Dockerfile%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91/</url>
+      
+        <content type="html"><![CDATA[<p>在大约两个月之前，我尝试基于Golang写了一个图片自动转换为<code>webp</code>的小程序，之后将它使用Docker进行封装📦</p><p>我们都知道在Docker的原镜像是通过Dockerfile进行构建的，虽然说Docker支持交叉编译，但是笔者在自己的笔记本上的使用状态并不是很好，arm编译x86失败了</p><p>之后了解到GitHub Actions提供了这样的一种虚拟机的解决方案，帮助我们在云端进行构建，接下来是我以自己的项目为例，去编译一个x86的Linux镜像</p><h2 id="原项目"><a href="#原项目" class="headerlink" title="原项目"></a>原项目</h2><p>原项目在这里：<a href="https://github.com/Aicnal/composeImage">https://github.com/Aicnal/composeImage</a></p><p>当时是在一台云服务上进行的<code>docker build</code>操作的，从这里我们可以看到，如果你要使用GitHub Actions进行构建的话，那么你要先确保你的原项目确确实实能构建出你想要的镜像</p><p><img src="https://img.duckk.org/2024/11/810226e125e3b9d0be801b070398191e.png"></p><h2 id="开始配置GitHub-Actions"><a href="#开始配置GitHub-Actions" class="headerlink" title="开始配置GitHub Actions"></a>开始配置GitHub Actions</h2><p>首先在项目根目录创建一个<code>.github</code>的文件夹，再在该文件夹内创建一个<code>workflow</code>文件夹，最后在该文件夹下创建<code>docker-build.yml</code>文件，这样的话当你<code>git push</code>之后，GitHub Actions就会自动识别到，并且执行相关指令</p><p>下面是具体的配置文件</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">构建镜像并推送到Docker</span> <span class="string">Hub</span></span><br><span class="line"><span class="attr">on:</span> <span class="string">push</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span> </span><br><span class="line">  <span class="attr">docker-build-linux:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Docker</span> <span class="string">build</span> <span class="string">Linux</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">读取仓库内容</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">登陆DockerHub</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">docker/login-action@v3</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.DOCKER_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.DOCKER_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">构建并且推送到Docker</span> <span class="string">Hub</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">docker/build-push-action@v5</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">push:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">tags:</span> <span class="string">aicnal/linux-image-compressor:latest</span></span><br></pre></td></tr></table></figure><p>其中我们需要到<code>Docker Hub</code>中获取到对应的<code>Token</code>，然后在对应的仓库内添加变量即可</p><p><img src="https://img.duckk.org/2024/11/85fb8ffbf6f150572f7b691be6d502b8.png"></p><p>添加完成，确认无误即可<code>git push</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>八月末——梦</title>
       <link href="/2024/11/02/%E6%97%A5%E5%B8%B8/%E5%85%AB%E6%9C%88%E6%9C%AB%E2%80%94%E6%A2%A6/"/>
       <url>/2024/11/02/%E6%97%A5%E5%B8%B8/%E5%85%AB%E6%9C%88%E6%9C%AB%E2%80%94%E6%A2%A6/</url>
@@ -181,11 +200,11 @@
     
     
     <entry>
-      <title>Day0 内蒙古之旅——出发！</title>
-      <link href="/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day0%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%87%BA%E5%8F%91%EF%BC%81/"/>
-      <url>/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day0%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%87%BA%E5%8F%91%EF%BC%81/</url>
+      <title>Day1 内蒙古之旅——呼伦贝尔大草原特辑</title>
+      <link href="/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day1%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%91%BC%E4%BC%A6%E8%B4%9D%E5%B0%94%E5%A4%A7%E8%8D%89%E5%8E%9F%E7%89%B9%E8%BE%91/"/>
+      <url>/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day1%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%91%BC%E4%BC%A6%E8%B4%9D%E5%B0%94%E5%A4%A7%E8%8D%89%E5%8E%9F%E7%89%B9%E8%BE%91/</url>
       
-        <content type="html"><![CDATA[<h1 id="Day0-内蒙古之旅——出发！"><a href="#Day0-内蒙古之旅——出发！" class="headerlink" title="Day0 内蒙古之旅——出发！"></a>Day0 内蒙古之旅——出发！</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在今年国庆期间，我和一位朋友来到了海拉尔</p><p>我是从北京出发，乘坐K1301次列车，坐了大概28个小时</p><p><img src="https://img.duckk.org/2024/11/64b18157c2844949e1874854dd5382fa.avif"></p><p>路上穿过河北、辽宁、吉林、黑龙江，欣赏了很多别样的风景，列车员阿姨很有意思，我喜欢喊她姨，她特别热情</p><p><img src="https://img.duckk.org/2024/11/06213617f2d3846727339b748b8ebb22.avif"></p><h2 id="夜晚"><a href="#夜晚" class="headerlink" title="夜晚"></a>夜晚</h2><p>到达酒店办好入住之后我们到外面吃了小火锅，肉确实挺多，回来路上我们顺带走了走，就看到下面的风景：</p><p><img src="https://img.duckk.org/2024/11/883b23b3ecbfc641f9cae0b54655de46.avif"></p><p><img src="https://img.duckk.org/2024/11/0926e813a80612815d70a64a740f8aaf.avif"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Day1-内蒙古之旅——呼伦贝尔大草原特辑"><a href="#Day1-内蒙古之旅——呼伦贝尔大草原特辑" class="headerlink" title="Day1 内蒙古之旅——呼伦贝尔大草原特辑"></a>Day1 内蒙古之旅——呼伦贝尔大草原特辑</h1><h2 id="出行"><a href="#出行" class="headerlink" title="出行"></a>出行</h2><p>我们住的酒店在海拉尔市区，离呼伦贝尔景点大概有25公里。在从海拉尔火车站到酒店的过程中我们其实就已经问过出租车师傅了，他告诉我们想去呼伦贝尔草原只有两种办法——租车自驾或者组团去，打车太贵了（这里埋个伏笔</p><p><del>还是感慨一下居然没有往返市区和景点的公交</del></p><p>自驾我不是很敢开车，组团我们觉得不是很自由，而且来之前我们酒店就已经定好了，我们不想改变原来的行程，当时我有一种我们可能去不了了的感觉</p><p>事情的转机发生在我们到海拉尔的第二天早上</p><p>当时我们去到了当地的一家比较有特色的早餐店，人比较多，我们和另外两个广西的老哥拼了桌。在等餐的过程中，他先问我们准备去哪里，原本我们准备去海拉尔国家森林公园，然后老哥就说他们准备去大草原，我又问他们准备怎么去，他就告诉我他们租了个车，自己开车去</p><p><img src="https://img.duckk.org/2024/11/a5fc60ae7200a2051c137add407292e0.webp" alt="内蒙非常有特色的奶茶"></p><p>这时候我们来兴趣了，我就问能不能搭他们的顺风车，然后和他们一起AA车费，结果出乎意料的是老哥欣然答应了，但是只能带我们去，他们要去另外的地方</p><p>这时候我还是有点犹豫的，类似于“有去无回”，但是我想如果这时候不去可能之后就没机会去了，便和我另外一个小伙伴决定去，回来的事情之后再说！</p><p>我们就这样开启了我们呼伦贝尔的行程</p><p><img src="https://img.duckk.org/2024/11/86d7a7071c41662eb840606602ac8768.png"></p><h2 id="旅途"><a href="#旅途" class="headerlink" title="旅途"></a>旅途</h2><p>路上我们是一路按着导航走（应该也只有一条路，大概半个小时左右就到达了游客中心，下图应该是当地的火电厂，同时路上还可以看到露天煤矿和各种各有的半挂车，感觉矿产资源还挺丰富的</p><p><img src="https://img.duckk.org/2024/11/7393b91760939faac6496e31b5d6f5f1.webp"></p><h3 id="进入大草原"><a href="#进入大草原" class="headerlink" title="进入大草原"></a>进入大草原</h3><p>到了游客中心之后需要进行换乘，只能使用官方的摆渡车在各个景点之间往返，摆渡车的价格为一人40元，似乎没有学生票优惠</p><p>大巴很正规，每个人都有自己的位置，而且发车发得很勤，基本上等五分钟就会有车过来</p><p><img src="https://img.duckk.org/2024/11/524b0f15b33fbe70598ad2cdaae9b181.webp"></p><h2 id="景点推荐"><a href="#景点推荐" class="headerlink" title="景点推荐"></a>景点推荐</h2><p>跟着大巴车走，一路上有很多小景点，不过我们没有选择去全部地点，只去了第一驿站和最后一站，其实中途有很多其他的景点，比如说骑马或者坐滑翔机之类的，不过我们不是很感兴趣就跳过了</p><p>当然如果你中途下车了是可以等下一班车继续的（只要车没坐满</p><h3 id="莫日格勒河"><a href="#莫日格勒河" class="headerlink" title="莫日格勒河"></a>莫日格勒河</h3><p>这一站其实是终点站，当时因为我朋友睡着了，我们就直接先坐到了终点站，莫日格勒河是这里主要的观景点</p><p>在这里可以直接登山观景台～</p><p><img src="https://img.duckk.org/2024/11/168ad88a46528eac3ee12e9c25ee5ee8.webp"></p><p>我们是从右边的入口进去的，之后会从左边的通道出来（跟着人流走就ok</p><p>路上走的时候，往右边看是大草甸</p><p><img src="https://img.duckk.org/2024/11/48f999e6ef088bc649de156d4478743d.avif"></p><p>登上去之后就可以看到莫日格勒河啦，像肠子一样弯弯曲曲，<del>想起了高中地理的试题</del></p><p><img src="https://img.juniortree.com/202410032231965.webp"></p><p>下面这一张我不确定是不是在顶上拍的，不过景色应该比较类似</p><p><img src="https://img.duckk.org/2024/11/e62bc0e875e79f4ebb62b99fc2dd7d4e.avif"></p><p>上面风其实还挺大的，建议多穿点，整一件冲锋衣其实很不错</p><p>嘿嘿嘿，朋友尼康给我拍的，感觉还不错</p><p><img src="https://img.duckk.org/2024/11/68389c320f6fa70f52ff04119b0e4230.avif"></p><p>你要是仔细观察会发现两边草不太一样，一边比较高，一边比较矮，尤其是秋天草黄了之后其实还挺好看的</p><p><img src="https://img.duckk.org/2024/11/c38b2ace9fc647d45d1a756669e97c13.avif"></p><p>下图的左边就是我们上来的路，相对靠右的就是回去的路，下面是一个换乘站，也是呼伦贝尔大草原的摆渡车终点站</p><p><img src="https://img.duckk.org/2024/11/70d4edf8c52b95f1c78e97300fb1a3f1.avif"></p><h3 id="坐车中"><a href="#坐车中" class="headerlink" title="坐车中"></a>坐车中</h3><p>车很颠簸，路很小，单车道乡道</p><p><img src="https://img.duckk.org/2024/11/f3b18d768aefc66a53da661a249fbceb.avif"></p><p>在坐车途中我拍到一张特别特别特别特别喜欢的照片，相机显示屏上面显示的效果非常非常非常好，但是拿出电脑开始预览就歇菜了，没对上焦，我懊恼了很久，基本构图还是很漂亮的，光影也很漂亮</p><p><img src="https://img.duckk.org/2024/11/a26a5feaf36e5635176339696fe0b3ca.avif"></p><p>有机会还是建议大家多看看窗外，还是很有意思的，尤其是看到外面无边无际的草原，对于我这种从小生活在南方丘陵小城的孩子来说还是很震撼的</p><h3 id="一号驿站"><a href="#一号驿站" class="headerlink" title="一号驿站"></a>一号驿站</h3><p>如果说莫日格勒河只能远远的看的话，那么一号驿站就是一个能切身体会大草原的地方</p><p>下车之后，驿站的本体其实就是个买东西的小店，真正的看头在房子的对面，对面有牧民给护栏开了个口子，每个人交20块钱就可以进去，还拴了两头比较小的羊咩咩，还有一些草垛提供给游客拍照</p><p>下图居中的部分就是一号驿站，密密麻麻的人就是交钱撸羊和拍照的游客</p><p><img src="https://img.duckk.org/2024/11/07697fc38254d260d47c45ac83555407.avif"></p><p>进入之后才是我心中正在草原应该有的样子，非常非常非常非常自由</p><p><img src="https://img.duckk.org/2024/11/14f620fbb8e1cae9c50685f1c1ab5ac3.avif"></p><p><img src="https://img.duckk.org/2024/11/5a587f089ab6b9265b718de9c06c0132.avif"></p><p><img src="https://img.duckk.org/2024/11/986a099f8d7157a7cc15653318762147.avif"></p><p><img src="https://img.duckk.org/2024/11/d1d600e8c01c4ad6de9ec0d00d09e7b7.avif"></p><h2 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h2><p>之前说了散客只能跟本地团或者自己租车，广西老哥他们由于目的地和我们不太一样，因此半路先走了，我们只能自己想办法回去</p><p>我们打算回市区的时候大概已经三点快四点了</p><p>后来运气还挺好，我们在高德上打到了回程车，师傅和我们说他刚好送一群小伙子从市区过来</p><p>不得不说内蒙古老乡真的热情，一路上我们问师傅有啥好吃的，他一个劲给我们推荐，给我们介绍去哪里玩</p><p>至于价格师傅是打表的（是高德上打的正经出租车，从景点到市区大概25公里，花了刚好80块，平时这段国道是要收费的，因为我没打过这么远的，因此价格只供参考</p>]]></content>
       
       
       <categories>
@@ -206,11 +225,11 @@
     
     
     <entry>
-      <title>Day1 内蒙古之旅——呼伦贝尔大草原特辑</title>
-      <link href="/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day1%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%91%BC%E4%BC%A6%E8%B4%9D%E5%B0%94%E5%A4%A7%E8%8D%89%E5%8E%9F%E7%89%B9%E8%BE%91/"/>
-      <url>/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day1%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%91%BC%E4%BC%A6%E8%B4%9D%E5%B0%94%E5%A4%A7%E8%8D%89%E5%8E%9F%E7%89%B9%E8%BE%91/</url>
+      <title>Day0 内蒙古之旅——出发！</title>
+      <link href="/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day0%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%87%BA%E5%8F%91%EF%BC%81/"/>
+      <url>/2024/10/03/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/Day0%20%E5%86%85%E8%92%99%E5%8F%A4%E4%B9%8B%E6%97%85%E2%80%94%E2%80%94%E5%87%BA%E5%8F%91%EF%BC%81/</url>
       
-        <content type="html"><![CDATA[<h1 id="Day1-内蒙古之旅——呼伦贝尔大草原特辑"><a href="#Day1-内蒙古之旅——呼伦贝尔大草原特辑" class="headerlink" title="Day1 内蒙古之旅——呼伦贝尔大草原特辑"></a>Day1 内蒙古之旅——呼伦贝尔大草原特辑</h1><h2 id="出行"><a href="#出行" class="headerlink" title="出行"></a>出行</h2><p>我们住的酒店在海拉尔市区，离呼伦贝尔景点大概有25公里。在从海拉尔火车站到酒店的过程中我们其实就已经问过出租车师傅了，他告诉我们想去呼伦贝尔草原只有两种办法——租车自驾或者组团去，打车太贵了（这里埋个伏笔</p><p><del>还是感慨一下居然没有往返市区和景点的公交</del></p><p>自驾我不是很敢开车，组团我们觉得不是很自由，而且来之前我们酒店就已经定好了，我们不想改变原来的行程，当时我有一种我们可能去不了了的感觉</p><p>事情的转机发生在我们到海拉尔的第二天早上</p><p>当时我们去到了当地的一家比较有特色的早餐店，人比较多，我们和另外两个广西的老哥拼了桌。在等餐的过程中，他先问我们准备去哪里，原本我们准备去海拉尔国家森林公园，然后老哥就说他们准备去大草原，我又问他们准备怎么去，他就告诉我他们租了个车，自己开车去</p><p><img src="https://img.duckk.org/2024/11/a5fc60ae7200a2051c137add407292e0.webp" alt="内蒙非常有特色的奶茶"></p><p>这时候我们来兴趣了，我就问能不能搭他们的顺风车，然后和他们一起AA车费，结果出乎意料的是老哥欣然答应了，但是只能带我们去，他们要去另外的地方</p><p>这时候我还是有点犹豫的，类似于“有去无回”，但是我想如果这时候不去可能之后就没机会去了，便和我另外一个小伙伴决定去，回来的事情之后再说！</p><p>我们就这样开启了我们呼伦贝尔的行程</p><p><img src="https://img.duckk.org/2024/11/86d7a7071c41662eb840606602ac8768.png"></p><h2 id="旅途"><a href="#旅途" class="headerlink" title="旅途"></a>旅途</h2><p>路上我们是一路按着导航走（应该也只有一条路，大概半个小时左右就到达了游客中心，下图应该是当地的火电厂，同时路上还可以看到露天煤矿和各种各有的半挂车，感觉矿产资源还挺丰富的</p><p><img src="https://img.duckk.org/2024/11/7393b91760939faac6496e31b5d6f5f1.webp"></p><h3 id="进入大草原"><a href="#进入大草原" class="headerlink" title="进入大草原"></a>进入大草原</h3><p>到了游客中心之后需要进行换乘，只能使用官方的摆渡车在各个景点之间往返，摆渡车的价格为一人40元，似乎没有学生票优惠</p><p>大巴很正规，每个人都有自己的位置，而且发车发得很勤，基本上等五分钟就会有车过来</p><p><img src="https://img.duckk.org/2024/11/524b0f15b33fbe70598ad2cdaae9b181.webp"></p><h2 id="景点推荐"><a href="#景点推荐" class="headerlink" title="景点推荐"></a>景点推荐</h2><p>跟着大巴车走，一路上有很多小景点，不过我们没有选择去全部地点，只去了第一驿站和最后一站，其实中途有很多其他的景点，比如说骑马或者坐滑翔机之类的，不过我们不是很感兴趣就跳过了</p><p>当然如果你中途下车了是可以等下一班车继续的（只要车没坐满</p><h3 id="莫日格勒河"><a href="#莫日格勒河" class="headerlink" title="莫日格勒河"></a>莫日格勒河</h3><p>这一站其实是终点站，当时因为我朋友睡着了，我们就直接先坐到了终点站，莫日格勒河是这里主要的观景点</p><p>在这里可以直接登山观景台～</p><p><img src="https://img.duckk.org/2024/11/168ad88a46528eac3ee12e9c25ee5ee8.webp"></p><p>我们是从右边的入口进去的，之后会从左边的通道出来（跟着人流走就ok</p><p>路上走的时候，往右边看是大草甸</p><p><img src="https://img.duckk.org/2024/11/48f999e6ef088bc649de156d4478743d.avif"></p><p>登上去之后就可以看到莫日格勒河啦，像肠子一样弯弯曲曲，<del>想起了高中地理的试题</del></p><p><img src="https://img.juniortree.com/202410032231965.webp"></p><p>下面这一张我不确定是不是在顶上拍的，不过景色应该比较类似</p><p><img src="https://img.duckk.org/2024/11/e62bc0e875e79f4ebb62b99fc2dd7d4e.avif"></p><p>上面风其实还挺大的，建议多穿点，整一件冲锋衣其实很不错</p><p>嘿嘿嘿，朋友尼康给我拍的，感觉还不错</p><p><img src="https://img.duckk.org/2024/11/68389c320f6fa70f52ff04119b0e4230.avif"></p><p>你要是仔细观察会发现两边草不太一样，一边比较高，一边比较矮，尤其是秋天草黄了之后其实还挺好看的</p><p><img src="https://img.duckk.org/2024/11/c38b2ace9fc647d45d1a756669e97c13.avif"></p><p>下图的左边就是我们上来的路，相对靠右的就是回去的路，下面是一个换乘站，也是呼伦贝尔大草原的摆渡车终点站</p><p><img src="https://img.duckk.org/2024/11/70d4edf8c52b95f1c78e97300fb1a3f1.avif"></p><h3 id="坐车中"><a href="#坐车中" class="headerlink" title="坐车中"></a>坐车中</h3><p>车很颠簸，路很小，单车道乡道</p><p><img src="https://img.duckk.org/2024/11/f3b18d768aefc66a53da661a249fbceb.avif"></p><p>在坐车途中我拍到一张特别特别特别特别喜欢的照片，相机显示屏上面显示的效果非常非常非常好，但是拿出电脑开始预览就歇菜了，没对上焦，我懊恼了很久，基本构图还是很漂亮的，光影也很漂亮</p><p><img src="https://img.duckk.org/2024/11/a26a5feaf36e5635176339696fe0b3ca.avif"></p><p>有机会还是建议大家多看看窗外，还是很有意思的，尤其是看到外面无边无际的草原，对于我这种从小生活在南方丘陵小城的孩子来说还是很震撼的</p><h3 id="一号驿站"><a href="#一号驿站" class="headerlink" title="一号驿站"></a>一号驿站</h3><p>如果说莫日格勒河只能远远的看的话，那么一号驿站就是一个能切身体会大草原的地方</p><p>下车之后，驿站的本体其实就是个买东西的小店，真正的看头在房子的对面，对面有牧民给护栏开了个口子，每个人交20块钱就可以进去，还拴了两头比较小的羊咩咩，还有一些草垛提供给游客拍照</p><p>下图居中的部分就是一号驿站，密密麻麻的人就是交钱撸羊和拍照的游客</p><p><img src="https://img.duckk.org/2024/11/07697fc38254d260d47c45ac83555407.avif"></p><p>进入之后才是我心中正在草原应该有的样子，非常非常非常非常自由</p><p><img src="https://img.duckk.org/2024/11/14f620fbb8e1cae9c50685f1c1ab5ac3.avif"></p><p><img src="https://img.duckk.org/2024/11/5a587f089ab6b9265b718de9c06c0132.avif"></p><p><img src="https://img.duckk.org/2024/11/986a099f8d7157a7cc15653318762147.avif"></p><p><img src="https://img.duckk.org/2024/11/d1d600e8c01c4ad6de9ec0d00d09e7b7.avif"></p><h2 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h2><p>之前说了散客只能跟本地团或者自己租车，广西老哥他们由于目的地和我们不太一样，因此半路先走了，我们只能自己想办法回去</p><p>我们打算回市区的时候大概已经三点快四点了</p><p>后来运气还挺好，我们在高德上打到了回程车，师傅和我们说他刚好送一群小伙子从市区过来</p><p>不得不说内蒙古老乡真的热情，一路上我们问师傅有啥好吃的，他一个劲给我们推荐，给我们介绍去哪里玩</p><p>至于价格师傅是打表的（是高德上打的正经出租车，从景点到市区大概25公里，花了刚好80块，平时这段国道是要收费的，因为我没打过这么远的，因此价格只供参考</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Day0-内蒙古之旅——出发！"><a href="#Day0-内蒙古之旅——出发！" class="headerlink" title="Day0 内蒙古之旅——出发！"></a>Day0 内蒙古之旅——出发！</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在今年国庆期间，我和一位朋友来到了海拉尔</p><p>我是从北京出发，乘坐K1301次列车，坐了大概28个小时</p><p><img src="https://img.duckk.org/2024/11/64b18157c2844949e1874854dd5382fa.avif"></p><p>路上穿过河北、辽宁、吉林、黑龙江，欣赏了很多别样的风景，列车员阿姨很有意思，我喜欢喊她姨，她特别热情</p><p><img src="https://img.duckk.org/2024/11/06213617f2d3846727339b748b8ebb22.avif"></p><h2 id="夜晚"><a href="#夜晚" class="headerlink" title="夜晚"></a>夜晚</h2><p>到达酒店办好入住之后我们到外面吃了小火锅，肉确实挺多，回来路上我们顺带走了走，就看到下面的风景：</p><p><img src="https://img.duckk.org/2024/11/883b23b3ecbfc641f9cae0b54655de46.avif"></p><p><img src="https://img.duckk.org/2024/11/0926e813a80612815d70a64a740f8aaf.avif"></p>]]></content>
       
       
       <categories>
@@ -326,9 +345,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 网络安全 </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 网站 </tag>
             
@@ -675,9 +694,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> Nginx </tag>
             
@@ -762,9 +781,9 @@
             
             <tag> 技术 </tag>
             
-            <tag> 闲聊 </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 闲聊 </tag>
             
         </tags>
       
