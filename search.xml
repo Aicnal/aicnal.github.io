@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>特种兵之一日游天津</title>
+      <link href="/2024/11/08/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/%E7%89%B9%E7%A7%8D%E5%85%B5%E4%B9%8B%E4%B8%80%E6%97%A5%E6%B8%B8%E5%A4%A9%E6%B4%A5/"/>
+      <url>/2024/11/08/%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/%E7%89%B9%E7%A7%8D%E5%85%B5%E4%B9%8B%E4%B8%80%E6%97%A5%E6%B8%B8%E5%A4%A9%E6%B4%A5/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>于是我驻足。</p></blockquote><p>早上六点钟起床，六点十五洗漱完成从宿舍出发，原本以为时间相当充足，可还是低估了北京的通勤时间，一路狂奔，提前两分钟坐上了高铁，启程！</p><p>半小时后按时到达天津站，一路上也没心情欣赏沿途的风景，咕噜咕噜睡了一下</p><p><img src="https://img.duckk.org/2024/11/2dd6712f795b625bd9b9f6ad61e15efe.webp"></p><p><img src="https://img.duckk.org/2024/11/3a99775a87d55bf45be10f2bc4bea90c.webp"></p><p>下一站我们直接去了<strong>世纪钟广场</strong>，在路上顺带吃了很有特色的小笼包</p><p><img src="https://img.duckk.org/2024/11/7c8813c1314b0deae92e80e201a0b600.webp"></p><p><img src="https://img.duckk.org/2024/11/052f0c5902a8468d23575352e9aa474d.webp"></p><p>之后去到<strong>意大利风情区</strong></p><p><img src="https://img.duckk.org/2024/11/4292c3e0b540b42b2fb393f11bd87df4.webp"></p><p><img src="https://img.duckk.org/2024/11/c9873579cc0b1e762fcf0f2dee61e36b.webp"></p><p><img src="https://img.duckk.org/2024/11/883d9b53a022315a76f6560e1047ee84.webp"></p><p><img src="https://img.duckk.org/2024/11/edfd53cc0b84429023909853e913cc15.webp"></p><p>「可是妳忘了 我也沒記起」</p><p><img src="https://img.duckk.org/2024/11/e48521b873208f9348f7f9fbb0889f8d.webp"></p><p>之后参观了<strong>瓷房子</strong></p><p><img src="https://img.duckk.org/2024/11/d59e245e8052fe082de3de5b1d7eaf0c.webp"></p><p>当然我们没进去，在外面拍了几张照片就匆匆离开了，瓷房子外面有意思的地方很多，给我的印象有点像北京的南锣鼓巷</p><p><img src="https://img.duckk.org/2024/11/cc138059240b3416b18bc4d79d9c8433.webp"></p><p>偶遇一家很有意思的咖啡店，店主似乎是一个摄影爱好者</p><p><img src="https://img.duckk.org/2024/11/109f922b266480a65e593048a257c57d.webp"></p><p><img src="https://img.duckk.org/2024/11/cd5de368f1875b3afc5a128e3351abf6.webp"></p><p><img src="https://img.duckk.org/2024/11/f419830cb4dcd86919a2a329bb98e7db.webp"></p><p>另外一家买潮物的店，两张都很喜欢，遂都放上来</p><p><img src="https://img.duckk.org/2024/11/25f20c42584b7da20ffe7531863193b4.webp"></p><p><img src="https://img.duckk.org/2024/11/427a25ff7c2ec1bec4ba9981d0fd7d63.webp"></p><p>中午吃了麦丹劳！“麦门永存”</p><p><img src="https://img.duckk.org/2024/11/378536da6af14c8cbb5147ab67b0fed7.webp"></p><p><img src="https://img.duckk.org/2024/11/e58aa965ba2e00c7ec518735fedd0383.webp"></p><p><img src="https://img.duckk.org/2024/11/e170141047a5d2032f966d15f7898351.webp"></p><p>返京是从滨海站出发的，路上看到铁轨，与周围黄色的树相辉映，有点像The Last of Us里面场景，还是很有意思的</p><p><img src="https://img.duckk.org/2024/11/8ed52f4369295fd4b842d43a1615d5e8.webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 旅行日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 天津 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git笔记</title>
+      <link href="/2024/11/05/Tech/Git%E7%AC%94%E8%AE%B0/"/>
+      <url>/2024/11/05/Tech/Git%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>该笔记参考自<a href="https://www.runoob.com/git">菜鸟教程|Git 教程</a>、<a href="https://www.bilibili.com/video/BV1r3411F7kn">技术蛋老师|Git工作流和核心原理 | GitHub基本操作 | VS Code里使用Git和关联GitHub</a></p></blockquote><blockquote><p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p></blockquote><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul><li>工作区：电脑中实际看到的项目</li><li>暂存区：英文叫 stage 或 index。一般存放在 <code>.git </code>目录下的 index 文件（.git&#x2F;index）中，所以我们把暂存区有时也叫作索引（index）</li><li>版本库：每次提交之后的记录</li></ul><p>可以使用<code>git add</code>命令将文件提交到暂存区：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add filename       <span class="comment"># 将单个文件添加到暂存区</span></span><br><span class="line">git add .              <span class="comment"># 将工作区中的所有修改添加到暂存区</span></span><br><span class="line">git status             <span class="comment"># 查看哪些文件在暂存区中</span></span><br></pre></td></tr></table></figure><p>当完全准备完成之后，可以一口气将暂存区中的文件提交到本地的版本库中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;Commit message&quot;</span>   <span class="comment"># 将暂存区的更改提交到本地版本库</span></span><br><span class="line">git commit -a -m <span class="string">&quot;Commit message&quot;</span> <span class="comment"># 暂存并且全部提交到本地版本库</span></span><br><span class="line">git <span class="built_in">log</span>                          <span class="comment"># 查看提交历史</span></span><br><span class="line">git <span class="built_in">log</span> --online                 <span class="comment"># 查看远程仓库的提交历史</span></span><br><span class="line">git diff                         <span class="comment"># 查看工作区和暂存区之间的差异</span></span><br><span class="line">git diff --cached                <span class="comment"># 查看暂存区和最后一次提交之间的差异</span></span><br></pre></td></tr></table></figure><p>之后再使用<code>git push</code>将本地仓库推送到远程仓库中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin branch-name</span><br></pre></td></tr></table></figure><p><a href="https://mermaid.live/edit#pako:eNqrVkrOT0lVslJKL0osyFDwCbKOyVMAAsfop9uXPtk752nPrlgFXV2FxJQUIGWn4BT9bFbT07UzQOIQlU4g6eT83NzMErAK5-hnc9Y8nbPhye7JT3dNhipyBikqKC3OACtxiX6xf87zFd0oSlzA5uTk56WC1Tgq6SjlphblJmamAF1XDVITo1SSkZqbGqNkBWQmJRYDWTF5tUB1iaUl-cGVeclKViVFpak6SkX5pekZSlZpiTnFQF5pQUpiSapLZiLQi7lw0YLEvKj8fAQ_NSWzJL_IFxIYyfl5aZnpSrUARcFodQ"><img src="https://mermaid.ink/img/pako:eNqrVkrOT0lVslJKL0osyFDwCbKOyVMAAsfop9uXPtk752nPrlgFXV2FxJQUIGWn4BT9bFbT07UzQOIQlU4g6eT83NzMErAK5-hnc9Y8nbPhye7JT3dNhipyBikqKC3OACtxiX6xf87zFd0oSlzA5uTk56WC1Tgq6SjlphblJmamAF1XDVITo1SSkZqbGqNkBWQmJRYDWTF5tUB1iaUl-cGVeclKViVFpak6SkX5pekZSlZpiTnFQF5pQUpiSapLZiLQi7lw0YLEvKj8fAQ_NSWzJL_IFxIYyfl5aZnpSrUARcFodQ?type=png"></a></p><h2 id="几个比较重要的文件状态"><a href="#几个比较重要的文件状态" class="headerlink" title="几个比较重要的文件状态"></a>几个比较重要的文件状态</h2><ol><li>工作区内文件</li></ol><ul><li>未追踪：untracked、unstage</li></ul><ol start="2"><li>暂存区内文件</li></ol><ul><li>已追踪：stage</li></ul><h2 id="初始化本地Git"><a href="#初始化本地Git" class="headerlink" title="初始化本地Git"></a>初始化本地Git</h2><ol><li><p>git config全局设置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span> <span class="comment"># 设置用户名</span></span><br><span class="line">git config --global user.email username@emailadress <span class="comment"># 设置用户邮箱</span></span><br><span class="line">git config --global init.defaultBranch main <span class="comment"># 设置本地默认分支为`main`</span></span><br></pre></td></tr></table></figure></li><li><p>本地git仓库操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment"># 在本地仓库开启版本控制</span></span><br><span class="line">git status <span class="comment"># 查看git信息</span></span><br><span class="line">git <span class="built_in">log</span> <span class="comment"># 查看git的版本信息</span></span><br></pre></td></tr></table></figure></li></ol><p>下面是<code>git status</code>试例</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">On branch main <span class="comment"># 当前正处于主分支</span></span><br><span class="line">Your branch is up to <span class="built_in">date</span> with <span class="string">&#x27;origin/main&#x27;</span>.</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed) <span class="comment"># 提示需要使用 git add来提交缓存区</span></span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory) <span class="comment"># git restore来回滚版本</span></span><br><span class="line">  (commit or discard the untracked or modified content <span class="keyword">in</span> submodules)</span><br><span class="line">        modified:   _config.anzhiyu.yml</span><br><span class="line">        modified:   scaffolds/post.md</span><br><span class="line">        modified:   themes/anzhiyu (modified content, untracked content)</span><br><span class="line"></span><br><span class="line">Untracked files: <span class="comment"># 这里显示的是尚未提交到缓存区的文件，注意`untracked`</span></span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line">        <span class="string">&quot;source/_posts/Tech/Git\347\254\224\350\256\260.md&quot;</span></span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure><p><code>.gitignore</code>文件的作用：该文件内的文件将不会被提交到git中，可以是单个文件，也可以是一个文件目录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line">_multiconfig.yml</span><br></pre></td></tr></table></figure><h2 id="git中的分支"><a href="#git中的分支" class="headerlink" title="git中的分支"></a>git中的分支</h2><p><img src="https://img.duckk.org/2024/11/d56baad7d538034ae40efb4ff86a0daa.png"></p><blockquote><p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p></blockquote><p>查看本地存在的所有分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch name</span><br></pre></td></tr></table></figure><p>创建新分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git switch -c name <span class="comment"># 创建一个分支，并且跳转到该分支上</span></span><br></pre></td></tr></table></figure><p>以下似乎在新版本的git中不推荐使用：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch name <span class="comment"># 只创建，并不会直接跳转到该分支</span></span><br><span class="line">git checkout -b name <span class="comment"># 创建并跳转到该分支</span></span><br></pre></td></tr></table></figure><p>改变某一分支的名字：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -m name <span class="comment"># 修改当前某一分支名</span></span><br><span class="line">git branch -M name <span class="comment"># 强制修改</span></span><br></pre></td></tr></table></figure><p>切换到该分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout name</span><br></pre></td></tr></table></figure><p>删除某一分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d name <span class="comment"># `d`代表delect</span></span><br><span class="line">git branch -D name <span class="comment"># 强制删除某一分支，在实际生产中并不推荐</span></span><br></pre></td></tr></table></figure><p>合并分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge name <span class="comment"># 注意是从别的分支合并到当前分支</span></span><br></pre></td></tr></table></figure><h2 id="GitHub-GitLab操作"><a href="#GitHub-GitLab操作" class="headerlink" title="GitHub&#x2F;GitLab操作"></a>GitHub&#x2F;GitLab操作</h2><p>直接使用<code>Download ZIP</code>是没有版本控制功能的，应当使用<code>git clone</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> link.git</span><br></pre></td></tr></table></figure><p>查看本地仓库和哪些远程仓库源有联系：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="comment"># 只会显示远程仓库的别名</span></span><br><span class="line">git remote -v <span class="comment"># 显示远程仓库的别名和地址</span></span><br></pre></td></tr></table></figure><p>这里的<code>origin</code>表示的是远程仓库的名字，默认都会使用<code>origin</code>来表示远程仓库的名字：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br><span class="line">origin</span><br><span class="line">---</span><br><span class="line">git remote -v</span><br><span class="line">origin  https://github.com/Aicnal/anzhiyu.git (fetch)</span><br><span class="line">origin  https://github.com/Aicnal/anzhiyu.git (push)</span><br></pre></td></tr></table></figure><p>添加远程仓库别名：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin <span class="built_in">link</span> <span class="comment"># 其中`origin`是仓库的别名，可以自定义，但一般为`origin`；`link`则为远程仓库的地址</span></span><br><span class="line">git remote set-url origin <span class="built_in">link</span> <span class="comment"># 其中`set-url`为修改仓库链接到指令，该操作用来修改远程仓库的地址</span></span><br></pre></td></tr></table></figure><p>更新本地与远程仓库：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure><p>在2021年GitHub已经取消了使用用户名和密码进行<code>push</code>，在这里我们需要去设置<code>Token</code>或者使用<code>GitHub CIL</code></p><p>更新远程代码到本地：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure><p>此时可以查看本地和远程仓库的区别：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff origin/main</span><br></pre></td></tr></table></figure><p>确认可以同步之后，将远程仓库和本地仓库整合起来：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure><p>一般来说，应该先将远程仓库中的内容同步到本地：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure><p>如果拉取的时候出现了冲突，可以尝试使用<code>--rebase</code>，这里的操作是先将远程的仓库拉到本地，远程仓库的commit变为老的一条，本地的commit则变为最新的一条</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin main</span><br></pre></td></tr></table></figure><p>将本地仓库的<code>main</code>分支同步到远程仓库中，本地文件夹名和仓库名可以不一样</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin main <span class="comment"># 制定同步的仓库和分支</span></span><br><span class="line">git push -u origin main <span class="comment"># 第一次最好使用这个指令，将本地的与远程的改为默认</span></span><br></pre></td></tr></table></figure><h3 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h3><p>在<code>commit</code>的时候可以添加#1来制定专门针对与某一Issue的提交</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;针对#1&quot;</span></span><br></pre></td></tr></table></figure><h3 id="Pull-Request-Fork"><a href="#Pull-Request-Fork" class="headerlink" title="Pull Request &#x2F; Fork"></a>Pull Request &#x2F; Fork</h3><p>在尝试<code>pull request</code>之前，需要自己先创建一个与<code>main</code>不同的分支，之后再进行<code>pull</code>操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin new-branch <span class="comment"># 此时`new-branch`即指定的新分支名</span></span><br></pre></td></tr></table></figure><p>在成功<code>pull request</code>之后，GitHub会自动删除该分支，但是本地并不会自动删除该分支<code>new-branch</code>，此时正确的操作应该是：</p><ol><li>先将远程的内容拉取下来<code>git pull</code>，先更新本地的<code>main</code>分支</li><li>再删除<code>new-branch</code>小分支，<code>git branch -d new-branch</code>，注意最好不要使用<code>-D</code>这种参数强制删除，容易犯错误！</li></ol><p><code>fork</code>类似于将别人的仓库拷贝到自己的仓库，在进行<code>fork</code>操作前，此时应该：</p><ol><li>先创建一个新的分支，一切操作将在这个新分支内完成，接着<code>add</code>、<code>commit</code>，一些操作应该按照原仓库作者的规范</li><li>再进行<code>push</code></li></ol><h3 id="Tag-Release"><a href="#Tag-Release" class="headerlink" title="Tag &#x2F; Release"></a>Tag &#x2F; Release</h3><p><code>tag</code>标签类似于版本号，用来表示某一阶段的工作的完成，<code>tag</code>就像照片一样，记录着那一刻的<code>commits</code>记录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag -a v1.0.0 -m <span class="string">&quot;comment&quot;</span> <span class="comment"># 这里的`a`是`annotation`，注解的意思</span></span><br><span class="line">git tag -d v1.0.0 <span class="comment"># `-d`即为删除对应的tag，删除本地的tag</span></span><br><span class="line">git push origin --delete v1.0.0 <span class="comment"># 删除远程仓库的tag</span></span><br></pre></td></tr></table></figure><p><code>release</code>的发行版其实是基于<code>tag</code>标签的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于GitHub-Actions实现的Dockerfile自动编译</title>
       <link href="/2024/11/04/Tech/%E5%9F%BA%E4%BA%8EGitHub-Actions%E5%AE%9E%E7%8E%B0%E7%9A%84Dockerfile%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91/"/>
       <url>/2024/11/04/Tech/%E5%9F%BA%E4%BA%8EGitHub-Actions%E5%AE%9E%E7%8E%B0%E7%9A%84Dockerfile%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91/</url>
@@ -195,6 +245,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 内蒙古 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -216,7 +272,7 @@
       
         <tags>
             
-            <tag> 旅行 </tag>
+            <tag> 内蒙古 </tag>
             
         </tags>
       
@@ -241,7 +297,7 @@
       
         <tags>
             
-            <tag> 旅行 </tag>
+            <tag> 内蒙古 </tag>
             
         </tags>
       
@@ -345,9 +401,9 @@
       
         <tags>
             
-            <tag> 网络安全 </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> 网络安全 </tag>
             
             <tag> 网站 </tag>
             
@@ -507,7 +563,7 @@
       
         <tags>
             
-            <tag> 旅行 </tag>
+            <tag> 贵州 </tag>
             
         </tags>
       
@@ -694,9 +750,9 @@
       
         <tags>
             
-            <tag> Docker </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> Docker </tag>
             
             <tag> Nginx </tag>
             
@@ -781,9 +837,9 @@
             
             <tag> 技术 </tag>
             
-            <tag> 网站 </tag>
-            
             <tag> 闲聊 </tag>
+            
+            <tag> 网站 </tag>
             
         </tags>
       
